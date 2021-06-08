@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- Custom styles for this template -->
+<link href="signin.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<link href="blog.css" rel="stylesheet">
+</head>
+<body class="text-center body-signin">
+
+  <div class="form-signin">
+    <h1 class="mb-5 names">- Kevin & Claire -</h1>
+    <h1 class="h4 mb-3 font-weight-normal">Entrez votre code</h1>
+    <label for="inputUser" class="sr-only">Code</label>
+    <input type="password" id="inputUser" class="form-control" placeholder="Code" required>
+    <button class="btn btn-lg btn-primary btn-block" onclick="login()">Entrer</button>
+    <p class="mt-5 mb-3 text-muted">&copy; guillaumecrt - 2021</p>
+  </div>
+
+<!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="EH6ECSFHWJZD2">
+    <button type="submit">Réserver la nuit d'hôtel</button>
+</form> -->
+
+<!-- <script src="js/javascript.js"></script> -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+
+<script>
+  //Firebase configuration
+  var config = {
+    apiKey: "AIzaSyBFtDWjJzoiGp2_vfZu23RXnjJNP0Q2GCI",
+    authDomain: "site-mariage-ee100.firebaseapp.com",
+    // For databases not in the us-central1 location, databaseURL will be of the
+    // form https://[databaseName].[region].firebasedatabase.app.
+    // For example, https://your-database-123.europe-west1.firebasedatabase.app
+    databaseURL: "https://site-mariage-ee100-default-rtdb.europe-west1.firebasedatabase.app/",
+    storageBucket: "site-mariage-ee100.appspot.com"
+  };
+  firebase.initializeApp(config);
+
+  // Reference to the database service
+  var database = firebase.database();
+</script>
+<script src="js/login.js"></script>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
+</body>
+</html>
